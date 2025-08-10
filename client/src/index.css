@@ -5,3 +5,17 @@
 * {
   font-family: "Outfit";
 }
+
+.placeholder-color {
+  color: #e0e0e0;
+  font-weight: 300;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
