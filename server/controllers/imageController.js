@@ -18,7 +18,11 @@ export const generateImage = async (req, res) => {
     if (!user) return res.json({ success: false, message: "User not found" });
 
     if (user.creditBalance <= 0) {
-      return res.json({ success: false, message: "Insufficient credits" });
+      return res.json({
+        success: false,
+        message: "Insufficient credits",
+        creditBalance: user.creditBalance, // 🔑 include balance here
+      });
     }
 
     console.log(`Generating image for user: ${user.name} | Prompt: ${prompt}`);
@@ -59,5 +63,3 @@ export const generateImage = async (req, res) => {
     res.json({ success: false, message: error.message });
   }
 };
-
-//new folder

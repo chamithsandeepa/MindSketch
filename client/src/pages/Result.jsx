@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { assets } from "../assets/assets";
 import { motion } from "framer-motion";
+import { AppContext } from "../context/AppContext";
 
 const Result = () => {
   const [image, setImage] = useState(assets.sample_img_1);
@@ -8,7 +9,21 @@ const Result = () => {
   const [Loading, setLoading] = useState(false);
   const [input, setInput] = useState("");
 
-  const onSubmitHandler = async (e) => {};
+  const { generateImage } = useContext(AppContext);
+
+  const onSubmitHandler = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    if (input) {
+      const generatedImage = await generateImage(input);
+      if (generatedImage) {
+        setIsImageLoaded(true);
+        setImage(generatedImage);
+      }
+    }
+    setLoading(false);
+  };
 
   return (
     <motion.form
@@ -23,8 +38,8 @@ const Result = () => {
         <div className="relative">
           <img className="max-w-sm rounded" src={image} alt="" />
           <span
-            className={`absolute bottom-0 left-0 h-1 bg-blue-500 w-full transition-all duration-[10s] ${
-              Loading ? "w-full transition-all duration-[10s]" : "w-0"
+            className={`absolute bottom-0 left-0 h-1 bg-blue-500 transition-all duration-[10s] ${
+              Loading ? "w-full" : "w-0"
             }`}
           ></span>
         </div>
