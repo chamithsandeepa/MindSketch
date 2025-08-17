@@ -64,8 +64,7 @@ const loginUser = async (req, res) => {
 // Get user credits
 const userCredits = async (req, res) => {
   try {
-    const userId = req.userId;
-
+    const userId = req.userId; // ✅ use req.userId
     const user = await userModel.findById(userId);
     res.json({
       success: true,
