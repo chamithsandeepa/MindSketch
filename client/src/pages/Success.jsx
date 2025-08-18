@@ -44,8 +44,19 @@ const Success = () => {
   }, []);
 
   return (
-    <div className="text-center mt-20">
-      <h2 className="text-2xl">Processing your payment...</h2>
+    <div className="min-h-[80vh] flex flex-col justify-center items-center text-center">
+      <div className="bg-gray-900/95 border border-purple-500/30 backdrop-blur-sm rounded-xl p-12 max-w-md w-full mx-4">
+        <div className="w-16 h-16 bg-purple-600/20 rounded-full flex items-center justify-center mx-auto mb-6 border border-purple-500/30">
+          <div className="w-8 h-8 border-4 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
+        </div>
+        <h2 className="text-2xl font-medium text-gray-100 mb-3">
+          Processing your payment...
+        </h2>
+        <p className="text-gray-400 text-sm">
+          Please wait while we verify your transaction and add credits to your
+          account.
+        </p>
+      </div>
     </div>
   );
 };

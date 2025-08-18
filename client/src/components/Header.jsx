@@ -25,7 +25,7 @@ const Header = () => {
       viewport={{ once: true }}
     >
       <motion.div
-        className="text-stone-500 inline-flex text-center gap-2 bg-white px-6 py-1 rounded-full border border-neutral-500"
+        className="text-purple-400 inline-flex text-center gap-2 bg-gray-900 px-6 py-1 rounded-full border border-purple-500"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.8 }}
@@ -33,32 +33,31 @@ const Header = () => {
         <p>Best text to image generator</p>
         <img src={assets.star_icon} alt="" />
       </motion.div>
-      <motion.h1 className="text-4xl max-w-[300px] sm:text-7xl sm:max-w-[590px] mx-auto mt-10 text-center">
-        Turn text to
+      <motion.h1 className="text-4xl max-w-[300px] sm:text-7xl sm:max-w-[590px] mx-auto mt-10 text-center text-white">
+        Create Stunning
         <span
-          className="text-blue-600"
+          className="text-purple-500"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 2 }}
         >
-          image
+          Visuals
         </span>
-        , in seconds.
+        , from Text.
       </motion.h1>
       <motion.p
-        className="text-center max-w-xl  mx-auto mt-5"
+        className="text-center max-w-xl mx-auto mt-5 text-gray-300"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6, duration: 0.8 }}
       >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis est
-        reprehenderit, ipsa voluptas esse ex dolore voluptatibus atque quo
-        consequuntur commodi necessitatibus alias recusandae at nobis veritatis
-        ea fugit mollitia.
+        Unleash your creativity with our advanced AI technology. Transform any
+        description into breathtaking, professional-quality images in seconds.
+        From concepts to masterpieces, your imagination is the only limit.
       </motion.p>
       <motion.button
         onClick={onClickHandler}
-        className="sm:text-lg text-white bg-black w-auto mt-8 px-12 py-2.5 flex items-center gap-2 rounded-full"
+        className="sm:text-lg text-white bg-purple-600 hover:bg-purple-700 w-auto mt-8 px-12 py-2.5 flex items-center gap-2 rounded-full"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         initial={{ opacity: 0 }}
@@ -70,7 +69,7 @@ const Header = () => {
       >
         Generate Images <img className="h-6" src={assets.star_group} alt="" />
       </motion.button>
-      <motion.div
+      {/* <motion.div
         className="flex flex-wrap justify-center gap-3 mt-16"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -90,13 +89,13 @@ const Header = () => {
           ))}
       </motion.div>
       <motion.p
-        className="mt-2 text-neutral-600"
+        className="mt-2 text-gray-400"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2, duration: 0.8 }}
       >
         Generated images from MindSketch
-      </motion.p>
+      </motion.p> */}
     </motion.div>
   );
 };

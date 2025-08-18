@@ -11,31 +11,39 @@ const Description = () => {
       viewport={{ once: true }}
       className="flex flex-col items-center justify-center my-24 p-6 md:px-28"
     >
-      <h1 className="text-3xl sm:text-4xl font-semibold mb-2">
-        Create AL Images
+      <h1 className="text-3xl sm:text-4xl font-semibold mb-2 text-white">
+        Create AI Images
       </h1>
-      <p className="text-gray-500 mb-8">Turn your imagination into visuals</p>
+      <p className="text-gray-300 mb-8">
+        Turn your imagination into professional visuals
+      </p>
       <div className="flex flex-cols gap-5 md:gap-14 md:flex-row items-center">
-        <img
-          className="w-80 xl:w-96 rounded-lg"
+        <motion.img
+          className="w-80 xl:w-96 rounded-lg border border-purple-500/30 shadow-lg shadow-purple-500/20"
           src={assets.sample_img_1}
           alt=""
+          whileHover={{ scale: 1.02 }}
+          transition={{ duration: 0.3 }}
         />
         <div>
-          <h2 className="text-3xl font-medium max-w-lg mb-4">
+          <h2 className="text-3xl font-medium max-w-lg mb-4 text-white">
             Introducing the AI-Powered Text to Image Generator
           </h2>
-          <p className="text-gray-600 mb-4">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla
-            aperiam tenetur tempore, deserunt iste perspiciatis molestias labore
-            veniam molestiae soluta libero nesciunt placeat eligendi, laborum
-            nostrum incidunt obcaecati quam dicta.
+          <p className="text-gray-300 mb-4">
+            Experience the future of digital creativity with our cutting-edge AI
+            technology. Our advanced neural networks understand complex
+            descriptions and transform them into stunning, high-resolution
+            images that capture every detail of your vision. Whether you're a
+            designer, marketer, or creative enthusiast, our platform empowers
+            you to bring any concept to life instantly.
           </p>
-          <p className="text-gray-600">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,
-            nobis ducimus. Eius fugiat aliquid sit dignissimos possimus
-            voluptate, beatae maiores aliquam totam quis quos id accusantium
-            molestiae dolorum reprehenderit provident!
+          <p className="text-gray-400">
+            From photorealistic portraits to abstract art, fantasy landscapes to
+            product mockups - our AI handles it all with remarkable precision
+            and artistic flair. No more waiting for designers or struggling with
+            complex software. Simply describe what you see in your mind, and
+            watch as our intelligent system crafts professional-quality visuals
+            that exceed your expectations.
           </p>
         </div>
       </div>

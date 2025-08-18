@@ -23,15 +23,17 @@ const GenerateBtn = () => {
       viewport={{ once: true }}
       className="pb-16 text-center"
     >
-      <h1 className="text-2xl md:text-3xl lg:text-4xl mt-4 font-semibold text-neutral-800 py-6 md:py-16">
-        See the magic. Generate your first image now!
+      <h1 className="text-2xl md:text-3xl lg:text-4xl mt-4 font-semibold text-white py-6 md:py-16">
+        Ready to Create Magic? Start Your AI Journey Now!
       </h1>
-      <button
+      <motion.button
         onClick={onClickHandler}
-        className="inline-flex items-center gap-2 px-12 py-3 rounded-full bg-black text-white m-auto hover:scale-105 transition-all duration-500"
+        className="inline-flex items-center gap-2 px-12 py-3 rounded-full bg-purple-600 hover:bg-purple-700 text-white m-auto transition-all duration-500 shadow-lg shadow-purple-500/25"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
       >
         Generate Images <img className="h-6" src={assets.star_group} alt="" />
-      </button>
+      </motion.button>
     </motion.div>
   );
 };

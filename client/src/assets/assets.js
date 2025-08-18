@@ -18,6 +18,7 @@ import cross_icon from './cross_icon.svg'
 import star_group from './star_group.png'
 import credit_star from './credit_star.svg'
 import profile_icon from './profile_icon.png'
+import { PenTool, Zap, Download } from "lucide-react";
 
 export const assets = {
     logo,
@@ -41,17 +42,17 @@ export const stepsData = [
     {
       title: 'Describe Your Vision',
       description: 'Type a phrase, sentence, or paragraph that describes the image you want to create.',
-      icon: step_icon_1,
+      icon: PenTool,
     },
     {
       title: 'Watch the Magic',
       description: 'Our AI-powered engine will transform your text into a high-quality, unique image in seconds.',
-      icon: step_icon_2,
+      icon: Zap,
     },
     {
       title: 'Download & Share',
       description: 'Instantly download your creation or share it with the world directly from our platform.',
-      icon: step_icon_3,
+      icon: Download,
     },
   ];
 
