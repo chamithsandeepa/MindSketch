@@ -22,8 +22,8 @@ const AppContextProvider = (props) => {
       });
 
       if (data.success) {
-        setCredit(data.credits);
-        setUser(data.user);
+        setCredit(data.credits); // ✅ update credit state
+        setUser(data.user); // ✅ update user state
       }
     } catch (error) {
       console.log(error);

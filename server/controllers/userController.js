@@ -83,17 +83,17 @@ const paymentStripe = async (req, res) => {
       case "Basic":
         planName = "Basic Plan";
         credits = 100;
-        amount = 200; // LKR
+        amount = 1000; // LKR
         break;
       case "Advanced":
         planName = "Advanced Plan";
         credits = 500;
-        amount = 1000; // LKR
+        amount = 5000; // LKR
         break;
       case "Business":
         planName = "Business Plan";
         credits = 5000;
-        amount = 5000; // LKR
+        amount = 25000; // LKR
         break;
       default:
         return res.json({ success: false, message: "Plan not found" });
@@ -122,7 +122,7 @@ const paymentStripe = async (req, res) => {
       mode: "payment",
       // 🔴 IMPORTANT: include {CHECKOUT_SESSION_ID} so you can verify later
       success_url: `${process.env.CLIENT_URL}/success?session_id={CHECKOUT_SESSION_ID}&transactionId=${transaction._id}`,
-      cancel_url: `${process.env.CLIENT_URL}/cancel`,
+      cancel_url: `${process.env.CLIENT_URL}/buy`,
     });
 
     res.json({ success: true, sessionId: session.id });

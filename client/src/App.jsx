@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Login from "./components/Login";
 import { AppContext } from "./context/AppContext";
+import Success from "./pages/Success";
 
 const App = () => {
   const { showLogin } = useContext(AppContext);
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/result" element={<Result />} />
         <Route path="/buy" element={<BuyCredit />} />
+        <Route path="/success" element={<Success />} />
       </Routes>
       <Footer />
     </div>
